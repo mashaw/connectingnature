@@ -1,0 +1,319 @@
+/*
+ * jQuery FlexSlider v2.4.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ */
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+.flex-container a:hover,
+.flex-slider a:hover,
+.flex-container a:focus,
+.flex-slider a:focus {
+  outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+.flexslider .flex-direction-nav a,
+.flexslider .flex-direction-nav a ,
+.flexslider:hover .flex-direction-nav a,
+.flexslider:hover .flex-direction-nav a {
+  display: block;
+}
+
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flexslider .slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .flexslider .slides {
+  display: block;
+}
+* html .flexslider .slides {
+  height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+  display: block;
+}
+
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+
+.flexslider {
+	margin: 0;
+	background: #fff;
+	border: none;
+	position: relative;
+	zoom: 1;
+}
+
+.flexslider .slides {
+	zoom: 1;
+}
+
+ul.slides li {position:relative}
+
+.flexslider .slides img {
+	height: auto;
+}
+
+.flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.loading .flex-viewport {
+	max-height: 300px;
+}
+
+.carousel li {
+	margin-right: 5px;
+}
+
+.flex-direction-nav {position: absolute;
+	top: auto;
+	right:0;
+	left:0;
+	bottom: 0px;
+	//height: 50px;
+	//background: rgba(0,0,0,0.33);
+	*height: 0;
+}
+
+
+.flex-direction-nav li {
+	margin: 0;
+	padding: 0;
+	&:last-child {
+		margin: 0!important;
+		padding: 0;
+	}
+	a {
+		vertical-align: middle;
+		text-decoration: none;
+		display: block;
+		font-size: 0;
+		width: 40px;
+		height: 50px;
+		margin: 0;
+		position: absolute;
+		//padding-top: 33%;
+		top: auto;
+		bottom: 0px;
+		z-index: 10;
+		overflow: hidden;
+		opacity: 1;
+		cursor: pointer;
+		color: #fff;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		&.flex-prev {
+			right: 40px;
+			&:after {font-size: 24px;
+				@include icon-font('\f104');
+			}
+		}
+		&.flex-next {
+			right: 5px;
+			&:after {font-size: 24px;
+				@include icon-font('\f105');
+			}
+		}
+//		&:before {
+//			font-size: 32px;
+//			line-height: 30px;
+//			top: 10px;
+//			position: absolute;
+//		}
+//		&.flex-next:before {
+//			font-size: 32px;
+//		}
+		&:focus {
+			outline: none
+		}
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+
+.flexslider:hover .flex-direction-nav .flex-prev {	}
+
+.flexslider:hover .flex-direction-nav .flex-next {	}
+
+.flex-direction-nav .flex-disabled {
+	opacity: 0!important;
+	filter: alpha(opacity=0);
+	cursor: default;
+}
+
+.flex-control-nav {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: auto;
+	bottom: 15px;
+	z-index: 10;
+	
+}
+
+.flex-control-nav li {
+	zoom: 1;
+	display: inline-block;
+	*display: inline-block;
+	margin: 0;
+}
+
+.flexslider {
+	margin-bottom: 0
+}
+
+.flex-control-paging li a {
+	width: 24px;
+	height: 24px;
+	display: block;
+	background: #fff;
+	border: 4px #fff solid;
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	margin: 0 8px;
+}
+
+.flex-control-paging li a:hover {
+	background: blue;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li a.flex-active:hover {
+	background: red;
+	cursor: default;
+}
+
+
+.banner-wrapper {
+	position: absolute;
+	top:auto;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	padding: 10px 10px 60px 10px;
+	background: rgba(0, 0, 0, 0.33);
+	h2,
+	p {
+		color: #fff;
+		margin: 0;
+		a {font-size:85%;
+			color: #fff;
+			text-decoration: none;
+			&:hover {
+				text-decoration:underline;
+			}
+			&:after {
+				font-size: 1em;
+				text-decoration: none;
+				padding-left:0.33em;
+			}
+
+		}
+	}
+	h2 {
+		font-size: 1.75em;
+		line-height: 1.33
+	}
+}
+
+/* ====================
+ * RESPONSIVE
+ * ====================*/
+
+@media all and (max-width: 768px) {
+	#block-views-front-page-banner-block {
+		.flexslider {
+			background: #a8a8a8;
+			//.flex-direction-nav,
+			.banner-wrapper {
+				background: #a8a8a8;
+				position: relative;
+				padding-bottom: 10px;
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+			.flex-control-nav {
+				position: relative;
+				top: auto;
+				padding-bottom: 0px;
+			}
+			.flex-direction-nav {
+				bottom: 10px;
+				li a:before {
+				//font-size: 24px!important;
+				}
+			}
+		}
+	}
+}
+		@media all and (max-width: 600px) {
+			#block-views-front-page-banner-block {
+				.flexslider {
+					.banner-wrapper {line-height: 1.3;padding-bottom: 20px;
+						h2 {
+							font-size: 1.15em;
+						}
+						p {
+							font-size: 0.9em;
+						}
+					}
+				}
+			}
+		}

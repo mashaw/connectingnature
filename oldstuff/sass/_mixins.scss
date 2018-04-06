@@ -1,0 +1,125 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Brand colours
+
+$green:#87ad26;
+$purple:#9375af;
+$blue:#9bd6e5;
+$yellow:#fced3a;
+$black:#4f4e4d;
+$darkgrey:#666666;
+$midgrey:#95989a;
+$grey:#666666;
+
+@mixin kill-list() {
+	 .menu  , ul , li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+
+@mixin tab-radius($radius) {
+-webkit-border-top-left-radius: $radius;
+-webkit-border-top-right-radius: $radius;
+-moz-border-radius-topleft:  $radius;
+-moz-border-radius-topright:  $radius;
+border-top-left-radius:  $radius;
+border-top-right-radius: $radius;
+}
+
+@mixin buttonhover($colour) {
+	background: $colour;
+	transition: background 0.05s ease 0s;
+	&:hover {text-decoration: none;
+		background: darken($colour, 15%);
+		text-decoration: none!important;
+		cursor: pointer
+	}
+	&:active {
+		background: darken($colour, 30%);
+		transition: all 0.1s linear;
+		text-decoration: none!important;
+		cursor: pointer
+	}
+}
+
+
+@mixin btn($fontsize) {
+	@include dosis-reg;
+	text-transform:uppercase;
+	font-size: $fontsize;
+	color: #fff;
+	border:none;
+	outline:none;
+	display: inline-block;
+	padding: 0.33em 0.66em;
+	@include border-radius(0);
+	text-decoration: none!important;
+	@include buttonhover($vblue);
+}
+
+
+
+@mixin icon-font($content) {
+	content: $content;
+  font-family: 'cn_icons2';
+	font-size:36px;
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

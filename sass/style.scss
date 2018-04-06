@@ -1,0 +1,1297 @@
+@import 'mixins';
+@import 'fonts';
+//dosis-bold 
+//dosis-semi 
+//open-reg
+//open-bold 
+//open-reg-italic
+//open-bold-italic
+// Default variables.
+@import 'default-variables';
+// Base-theme overrides.
+@import 'flexslider';
+// Base-theme overrides.
+@import 'overrides';
+@import 'social_links';
+@import 'forms';
+@import 'navigation';
+
+a:link ,
+a:visited  {color:$green;}
+
+.container-fluid {
+    padding: 0 15px ;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1300px;
+    background-color: #FFF
+}
+
+header.header,
+footer.footer {
+    background: #fff;
+    width: 100%;
+    padding: 15px 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    .container-fluid {
+        background: transparent;
+    }
+}
+
+header.header {padding-bottom:0}
+
+.page-header {
+    padding-bottom: 0;
+    margin: 10px 0 20px 0;
+    border-bottom: none;
+
+}
+
+.field-name-field-date {
+    text-transform: uppercase;
+    margin: 1em 0
+}
+
+.node-article h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+a.more-link,
+.node-readmore a {
+    font-weight: bold;
+    text-transform: uppercase;
+    word-break: keep-all;
+    &:link {
+        text-decoration: none;
+    }
+    &:after {
+        @include icon-font('\f105');
+        font-size: 1em;
+        padding-left: 4px;
+    }
+    &:hover {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid $midgrey;
+    clear:both;
+}
+
+.views-row-last hr {
+    display: none
+}
+
+
+
+/*/ === COLUMN OVERRIDES === /*/
+
+.flush-left {
+    padding-left: 0
+}
+
+.flush-right {
+    padding-right: 0
+}
+
+@media all and (max-width: 768px) {
+    
+ [class*="col-"]    [class*="col-"].field {
+    padding-left: 0 !important;
+     padding-right: 0 !important;
+    }
+}
+
+/*/ === HEADER === /*/
+
+.navbar.container-fluid {
+    margin-top: 0px;
+}
+
+.navbar.container-fluid.navbar-default > .container-fluid  {
+    margin-top: 0px;
+}
+
+.navbar-header {
+    float: none;
+    .navbar-btn.logo {
+        padding: 0;
+        margin:0 0  15px 0;
+        width: 180px;
+        img {
+            width: 100%;
+        }
+    }
+    @media all and (max-width: 768px) {
+        
+         .navbar-btn.logo {
+             width: 155px;}
+        
+    }
+        @media all and (max-width: 500px) {
+        
+         .navbar-btn.logo {
+             width: 130px;}
+        
+    }
+    .region-header {
+        float: right;
+        section#block-search-form,
+        section#block-menu-menu-social-media {
+            float: none;
+            margin: 0 0 0.5em 1em;
+        }
+        section#block-menu-menu-social-media {
+            margin-right: 0.5em
+        }
+        section#block-search-form {
+            padding-top: 3px
+        }
+    }
+    @media all and (min-width: 769px) {
+        .navbar-collapse {
+            float: right;
+        }
+    }
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border: none;clear:right;
+}
+
+ 
+@media all and (min-width: 600px) {
+    .navbar-header .region-header {
+        section#block-search-form,
+        section#block-menu-menu-social-media {
+            clear: none;
+            float: right;
+            margin: 0 0 0.5em 1em
+        }
+        
+    }
+}
+
+navbar-nav.menu.nav {
+    li {
+        display: inline-block;
+        a {
+            display: inline;
+            color: $midgrey;
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+                background: transparent;
+            }
+        }
+    }
+}
+
+
+
+.navbar.container-fluid.navbar-default {
+    margin-bottom:0;
+    .container-fluid {
+        padding-top: 0;
+        padding-bottom:0;
+        margin-bottom:0;
+    }
+}
+
+
+/*/ === Navigation === /*/
+
+
+ul.nav li.dropdown:hover ul.dropdown-menu {
+  display: block;
+}
+
+ul.nav li.dropdown ul.dropdown-menu { 
+  margin-top: 0;
+}
+
+.navbar.container-fluid.navbar-default {
+    border: none;
+    >.container-fluid {
+        padding: 0 15px 10px 15px;
+        margin-right: auto;
+        margin-left: auto;
+            max-width: 1300px;
+    }
+}
+
+
+/*/ === MAIN SECTION === /*/
+
+
+#page-header {}
+
+
+aside[role="complementary"]  {padding-top: 15px;}
+
+.main-container section#content-section ,
+.main-container.content_blocks  {
+    padding-top: 15px;
+    &.col-sm-12 {
+        @media (min-width: 768px) {
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+        @media (min-width: 960px) {
+            padding-right: 200px;
+            padding-left: 200px;
+        }
+    }
+}
+
+
+
+.front .main-container section#content-section,
+.front .main-container.content_blocks {
+    padding-top: 15px;
+    &.col-sm-12 {
+        @media (min-width: 768px) {
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+        @media (min-width: 960px) {
+            padding-right: 140px;
+            padding-left: 140px;
+        }
+    }
+}
+
+//&.col-sm-12 {
+//    @media (min-width: 768px) {
+//        padding-right: 70px;
+//        padding-left: 70px;
+//    }
+//    @media (min-width: 960px) {
+//        padding-right: 140px;
+//        padding-left: 140px;
+//    }
+//}
+
+header.sidebars {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+header.no-sidebars {
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 768px) {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    @media (min-width: 960px) {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+}
+
+
+.front header.no-sidebars {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 768px) {
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+    @media (min-width: 960px) {
+        padding-right: 140px;
+        padding-left: 140px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    aside.col-md-3.col-sm-4 {
+        float: none;
+        clear: both
+    }
+}
+
+
+
+/*/ === FRONT PAGE === /*/
+
+.front .field-name-body h2 {
+    margin-top: 0
+}
+
+@media (min-width: 960px) {
+    .front .field-name-body {
+        padding-right: 15px;
+        width: 50%
+    }
+}
+
+@media (max-width: 960px) {
+    #block-views-cites-page-block-1 {
+        width: 100%;
+        clear: both;
+        margin-bottom: 15px;
+        padding: 0
+    }
+}
+.main-container.content_blocks {
+    padding-top: 0;
+}
+
+#block-block-2,
+#block-block-3 {
+    margin-bottom: 15px
+}
+
+
+/*/ === FOOTER === /*/
+
+
+footer.footer {
+    background: $green;
+}
+
+
+
+
+
+#block-menu-block-1 {
+    margin: 0 0 1em 0;;
+    float: none;
+    .menu.nav {
+        text-align: center;
+        >li>a {
+            padding: 3px 10px
+        }
+        li {
+            display: inline-block;
+            a {
+                text-transform: uppercase;
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    color: #fff;
+                    text-decoration: underline;
+                    background: transparent;
+                }
+            }
+            li {
+                display: block;
+            }
+        }
+    }
+}
+
+#block-block-4 p {
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 3px 0;
+    img {
+        margin: 1em 0;
+        width:125px;
+        border: 3px solid #fff
+    }
+}
+
+
+
+
+$green:#87ad26;
+$purple:#9375af;
+$blue:#9bd6e5;
+$yellow:#fced3a;
+$black:#4f4e4d;
+$Xblack:#292929;
+
+
+
+/*/ ===  FEATURE BOXES === /*/
+
+
+.front .field-name-body {margin-bottom:30px}
+
+    .feature-box { 
+        //margin: 15px -15px 15px -15px;
+        .views-row {
+            margin: 15px 0;
+            .wrapper {@include feature-box-wrapper }
+            &:first-child {margin-top:0}
+
+    }
+}
+
+
+.feature-box  {
+    #overlay_toggle1:checked~.view-content .wrapper {
+        .text-content {
+            top: 0;
+        }
+        &:hover {
+            cursor: default
+        }
+    }
+    .field_description,
+        .date-display-range {
+            color: #fff!important;
+            line-height: 1.2;
+        }
+}
+
+.feature-box {
+    #overlay_toggle2:checked~.view-content .wrapper {
+        .text-content {
+            top: 0;
+        }
+        &:hover {
+            cursor: default
+        }
+    }
+}
+
+.feature-box-top  {
+    position: relative;
+}
+
+.feature-box {
+    label[for=overlay_toggle2] {
+        position: absolute;
+        top: 50%;
+        left: 100%
+    }
+}
+
+label[for=overlay_toggle1],
+label[for=overlay_toggle2] {
+    margin-top: -1em;
+    color: $purple;
+    font-size: 1em;
+    font-weight: normal;
+    cursor: pointer;
+    span {
+        em {
+            display: none;
+        }
+        &:before {
+            @include icon-font('\f13a');
+        }
+    }
+    &:hover {
+        color: $green;
+    }
+}
+
+
+
+#overlay_toggle1,
+#overlay_toggle2 {
+    display: none;
+    &:before {
+        @include icon-font('\f13a');
+    }
+    &:checked~label[for=overlay_toggle1],
+    &:checked~label[for=overlay_toggle2] {
+        span {
+            &:before {
+                @include icon-font('\f139');
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .view-team-page.view-display-id-page>.view-content>.views-row,
+    .view-front-page-feature-boxes .views-row {
+        width: 33.3%;
+        float: left
+    }
+}
+
+@media all and (max-width: 992px) {
+    #block-views-blog-articles-block-2 {
+        padding-right: 0
+    }
+}
+
+@media all and (max-width: 768px) {
+    .block.article,
+    .entity.entity-paragraphs-item.paragraphs-item-feature-box-3-col,
+    .view-team-page.view-display-id-page>.view-content>.views-row,
+    .view-front-page-feature-boxes .views-row {
+        width: 50%;
+        float: left
+    }
+}
+
+@media all and (max-width: 480px) {
+    .block.article,
+    .entity.entity-paragraphs-item.paragraphs-item-feature-box-3-col,
+    .view-team-page.view-display-id-page>.view-content>.views-row,
+    .view-front-page-feature-boxes .views-row {
+        width: 100%;
+        float: none;
+         .wrapper {
+            // max-height: 200px;
+            img {
+                margin-top: -18%;
+                margin-bottom: -18%;
+            }
+        }
+    }
+    .block.article {
+        padding: 0;
+        height: auto!important
+    }
+}
+
+/*/ === FRONT PAGE BLOCKS === /*/
+
+
+
+.purple .views-row .wrapper {
+    border-color: $purple;
+    .text-content {
+        color: $Xblack;
+        background: rgba( $purple, 0.75);
+        h2,
+        p {
+            color: #000;
+        }
+    }
+}
+
+.green .views-row .wrapper {
+    border-color: $green;
+    .text-content {
+        background: rgba( $green, 0.85);
+    }
+}
+
+.blue .views-row .wrapper {
+    border-color: $blue;
+    .text-content {
+        background: rgba( $blue, 0.85);
+    }
+}
+
+.yellow .views-row .wrapper {
+    border-color: $yellow;
+    .text-content {
+        background: rgba( $yellow, 0.85);
+    }
+}
+
+
+/*/ === COLOURED BLOCKS === /*/
+
+.block {
+    .block-title {
+        font-size: 24px;
+    }
+    label[for=edit-combine] {
+        display: none
+    }
+    .views-widget-filter-combine,
+    .views-widget-filter-field_event_date_value,
+    .views-widget-filter-field_event_date_value2 {
+       @media all and (min-width: 768px) { padding-right: 0;
+        }}
+    #edit-combine.form-text,
+    .bef-datepicker {
+        padding-left: 0;
+        padding-right: 0;
+        text-indent: 6px;
+        width: 100%;
+        background: rgba( 255, 255, 255, 0.5);
+        &:focus {
+            background: #fff;
+        }
+    }
+    &.purple {
+        padding: 1em;
+        background: rgba( $purple, 0.75);
+        .form-text {
+            border-color: $purple;
+        }
+    }
+    &.green {
+        padding: 1em;
+        background: rgba( $green, 0.85);
+        .form-text {
+            border-color: $green;
+        }
+    }
+    &.blue {
+        padding: 1em;
+        background: rgba( $blue, 0.85);
+        .form-text {
+            border-color: $blue;
+        }
+    }
+    &.yellow {
+        padding: 1em;
+        background: rgba( $yellow, 0.85);
+        .form-text {
+            border-color: $yellow;
+        }
+    }
+    .views-exposed-form .views-exposed-widget button.btn.btn-info,
+    .views-exposed-form .views-exposed-widget button.btn.btn-default.form-submit {
+        color: #fff;
+        background: transparent;
+        border-color: #fff;
+        @media all and (min-width: 768px) {
+            margin-top: 0.5em;
+        }
+        &:hover {
+            background: #fff;
+            color: $black;
+        }
+        &:focus,
+        &:active {
+            background: $black!important;
+            color: #fff!important;
+            border-color: $black!important;
+        }
+    }
+}
+
+/*/ --- Articles --- /*/
+
+.block.article ,
+.block.twitter {
+    height: 350px;
+}
+
+.block.article {
+    .feature-box .views-row {
+        margin: 0;
+        .wrapper {
+            height: 275px;
+            display: block;
+            .text-content {
+                top: 0
+            }
+        }
+    }
+}
+
+/*/ --- Events --- /*/
+
+.view-events.view-display-id-block_1,
+.view-id-events.view-display-id-page {
+    margin-left: -15px;
+    margin-right: -15px;
+    .attachment-after {
+        clear: both;
+        padding-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        .leaflet-container h4 a {
+            color: $purple;
+            font-weight: 700;
+        }
+    }
+    .event {
+        color: $Xblack;
+    }
+}
+
+.field-type-geofield {
+    clear: both;
+    float: none
+}
+
+.date-display-range span {
+    white-space: nowrap;
+}
+
+
+
+
+
+/*/ === TEAM PAGE === /*/
+    .view-team-page.view-display-id-page {
+    margin: 15px -15px 15px -15px;
+    h3 {
+        clear: both;
+        margin: 0 15px 0px 15px;
+        padding: 0px 0 10px 0;
+    }
+    .views-row {
+        margin-bottom: 15px;
+        .wrapper {
+            @include feature-box-wrapper;
+        }
+        .wrapper {
+            border-color: $blue;
+            .text-content {
+                h2 {
+                    font-size: 21px;
+                }
+                background: rgba( $blue, 0.85);
+            }
+            //Trinity College Dublin//
+            &.institution_45 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //Stad Genk//
+            &.institution_66 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+            }
+            //Glasgow City Council//
+            &.institution_67 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //City of Poznań//
+            &.institution_68 {
+                border-color: $yellow;
+                .text-content {
+                    background: rgba( $yellow, 0.85);
+                }
+            }
+            //A Coruña City//
+            &.institution_69 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //Metropolitan City of Bologna//
+            &.institution_70 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+            }
+            //Burgas Municipality//
+            &.institution_71 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //Municipality of Ioannina//
+            &.institution_72 {
+                border-color: $yellow;
+                .text-content {
+                    background: rgba( $yellow, 0.85);
+                }
+            }
+            //Promalaga (City of Malaga)//
+            &.institution_73 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //Nicosia Development Agency//
+            &.institution_47 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+                
+            }
+            //Sarajevo Economic Region Development Agency//
+            &.institution_49 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //Municipality of Pavlos Melas//
+            &.institution_74 {
+                border-color: $yellow;
+                .text-content {
+                    background: rgba( $yellow, 0.85);
+                }
+            }
+            //Centre for Ecological-Noosphere Studies //
+            &.institution_51 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //Dutch Research Institute for Transitions//
+            &.institution_53 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+            }
+            //University of East London//
+            &.institution_55 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //University of A Coruña//
+            &.institution_57 {
+                border-color: $yellow;
+                .text-content {
+                    background: rgba( $yellow, 0.85);
+                }
+            }
+            //Humboldt University//
+            &.institution_75 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //Adam Mickiewicz University in Poznan//
+            &.institution_76 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+            }
+            //University College Dublin//
+            &.institution_59 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //West University of Timisoara //
+            &.institution_77 {
+                border-color: $yellow,;
+                .text-content {
+                    background: rgba( $yellow, 0.85);
+                }
+            }
+            //Horizon Europe//
+            &.institution_78 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //Bioazul//
+            &.institution_79 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+            }
+            //Climate Alliance//
+            &.institution_80 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //Helix Pflanzen//
+            &.institution_81 {
+                border-color: $green;
+                .text-content {
+                    background: rgba( $green, 0.85);
+                }
+            }
+            //International Council for Local Environmental Initiativies//
+            &.institution_61 {
+                border-color: $blue;
+                .text-content {
+                    background: rgba( $blue, 0.85);
+                }
+            }
+            //OSMOS//
+            &.institution_145 {
+                border-color: $purple;
+                .text-content {
+                    background: rgba( $purple, 0.75);
+                }
+            }
+            //GIS and RS Consulting Center Geographic//
+            &.institution_146 {
+                border-color: $yellow;
+                .text-content {
+                    background: rgba( $yellow, 0.85);
+                }
+            }
+                //Urban Planning Institute of the Republic of Slovenia//
+                &.institution_63 {
+                    border-color: $green;
+                    .text-content {
+                        background: rgba( $green, 0.85);
+                    }
+                }
+                //Oppla// 
+                &.institution_82 {
+                    border-color: $blue;
+                    .text-content {
+                        background: rgba( $blue, 0.85);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+/*/ === PARAGRAPH BUNDLES === /*/
+
+.paragraphs-items-field-text-image-paragraph {
+    h2 {
+        clear: both
+    }
+    img {
+        float: none;
+        margin: 1em 0;
+    }
+    @media all and (min-width: 768px) {
+        img {
+            float: right;
+            margin: 0.5em 0 1em 1em
+        }
+    }
+}
+
+.paragraphs-items-field-feature-box-3-col {
+    margin: 15px -15px;
+    .entity-paragraphs-item.paragraphs-item-feature-box-3-col {
+        margin: 0 0 30px 0;
+    }
+    .wrapper {
+        @include feature-box-wrapper;
+    }
+    & .purple .wrapper {
+        border-color: $purple;
+        .text-content {
+            color: $Xblack;
+            background: rgba( $purple, 0.75);
+            h2,
+            p {
+                color: $Xblack;
+            }
+        }
+    }
+    & .green .wrapper {
+        border-color: $green;
+        .text-content {
+            background: rgba( $green, 0.85);
+        }
+    }
+    & .blue .wrapper {
+        border-color: $blue;
+        .text-content {
+            background: rgba( $blue, 0.85);
+            
+            
+        }
+    }
+    & .yellow .wrapper {
+        border-color: $yellow;
+        .text-content {
+            background: rgba( $yellow, 0.85);
+        }
+    }
+    .wrapper {
+        .field {
+            margin: 0;
+            &.field_description {
+                line-height: 1.3;
+                margin: 0 0 1em 0
+            }
+        }
+    }
+    & .fixed .wrapper {
+        &:hover {
+            cursor: default
+        }
+        .text-content {
+            top: 0;
+        }
+    }
+    @media all and (min-width: 992px) {
+        & .col-md-6 .wrapper img {
+            margin-top: -18%;
+            margin-bottom: -18%;
+        }
+    }
+}
+
+/*/  === INLINE IMAGES ===  /*/
+
+.field-name-body {
+    img {
+        margin: 10px 0px;
+        width: 100%!important;
+        height: auto!important;
+        max-width: 100%;
+    }
+    figure {
+        width: 100%;
+        padding: 0;
+        margin: 5px 0px;
+        img {
+            margin: 0;
+            max-width: 100%;
+        }
+        br {
+            display: none
+        }
+    }
+    img[style*="float:left"],
+    figure[style*="float:left"] {
+        margin: 5px 15px 15px 0px;
+        width: 50%!important;
+    }
+    img[style*="float:right"],
+    figure[style*="float:right"] {
+        margin: 5px 0px 15px 15px;
+        width: 50%!important;
+    }
+}
+
+
+@media all and (max-width: 480px) {
+    .field-name-body {
+        img[style*="float:left"],
+        figure[style*="float:left"],
+        img[style*="float:right"],
+        figure[style*="float:right"] {
+            float: none!important;
+            margin: 10px 0px;
+            width: 100%!important;
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 960px) {
+    .field-name-body {
+        img[style*="float:left"],
+        figure[style*="float:left"],
+        img[style*="float:right"],
+        figure[style*="float:right"] {
+            float: none!important;
+            margin: 10px 0px;
+            width: 100%!important;
+        }
+    }
+}
+
+figcaption {
+    font-size: 80%;line-height:1.4;
+    padding: 6px 0 9px 0;
+    margin: 0;
+    border-bottom: 3px solid $green;
+}
+img.imgtoright,
+img.imgtoright-quarter {
+    float: right;
+    margin: 0 0 15px 2%;
+    clear: right;
+    max-width: 48%;
+    width: 480px;
+}
+
+img.imgtoleft,
+img.imgtoleft-quarter {
+    float: left;
+    margin: 0 2% 15px 0;
+    clear: left;
+    max-width: 48%;
+    width: 480px;
+}
+
+img.imgtomiddle {
+    float: none;
+    margin: 15px auto;
+    clear: both;
+    display: block;
+}
+
+img.imgtoleft-quarter,
+img.imgtoright-quarter {
+    width: 240px;
+    max-width: 23%;
+}
+
+
+img.thumbnail-img ,
+.thumbnail-img img {
+    float: left;
+    margin: 0 2% 15px 0;
+    clear: left;
+    max-width: 23%;
+    width: 125px;
+    height: auto;
+    padding: 5px;
+    vertical-align: baseline;
+}
+@media all and (max-width: 768px) {
+    img.imgtoright,
+    img.imgtoleft {
+        max-width: 48%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    img.imgtoright,
+    img.imgtoleft {
+        float: none;
+        margin: 15px auto;
+        clear: both;
+        display: block;
+        max-width: 100%;
+    }
+    img.imgtoleft-quarter,
+    img.imgtoright-quarter {
+        max-width: 48%;
+    }
+}
+
+
+
+
+/*/ === ARTICLES === /*/
+
+
+
+.view-display-id-page_1,
+.view-display-id-page {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+//.node-article.node-teaser {
+//    .field-name-field-date,
+//    .field-name-field-author {
+//        text-transform: uppercase;
+//        margin-bottom: 0.5em;
+//        color: $green;
+//        line-height: 1.2;
+//    }
+//    .field-name-body h2:first-child,
+//    .field-name-body h3:first-child {
+//        margin-top: 0
+//    }
+//}
+
+.node-type-article {
+    .field-name-body img {
+        width: 100%;
+        height: inherit;
+    }
+    .field-name-field-date,
+    .field-name-field-author,
+    .field-name-field-tags {
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+        color: $green;
+        line-height: 1.2;
+    }
+    
+    .field-name-field-tags {
+        font-size: 90%;
+        .field-item {
+            display: inline-block;
+            margin-right: 0.5em;
+        }
+    }
+    .field-name-body h2:first-child,
+    .field-name-body h3:first-child {
+        margin-top: 0
+    }
+}
+
+
+
+.node-type-article.blog .field-name-field-date,
+.field-name-field-author,
+.field-name-field-tags {
+    color: $blue!important;
+}
+
+.node-type-article.news .field-name-field-date,
+.field-name-field-author,
+.field-name-field-tags {
+    color: $green!important;
+}
+
+/*/ === EVENTS === /*/
+
+
+
+.node-type-event .wrapper.flush-left {
+    color: $purple;
+}
+
+    /*/ --- Teasers --- /*/
+
+.view-id-events.view-display-id-page {
+    //margin-left:-15px;margin-right:-15px;
+//    .views-row {
+//        overflow: hidden;
+//        border-top: 6px solid purple;
+//        position: relative;
+//        display: block;
+//        text-align: center;
+//        margin-bottom:1.5em;
+//        .text-content {
+//            font-size: 14px;
+//            position: absolute;
+//            top: 0;
+//            left: 0;
+//            bottom: 0;
+//            right: 0;
+//            padding: 6px 12px 12px 12px;
+//            background: rgba( $purple, 0.75);
+//            h2 {
+//                font-size: 28px;
+//                margin: 0 0 10px 0
+//            }
+//            p,
+//            .date-display-range {
+//                color: #fff
+//            }
+//        }
+//    }
+}
+
+#block-views-exp-events-page ,
+#block-views-exp-blog-articles-page ,
+#block-views-exp-blog-articles-page-1  {
+
+    margin: 0 0 30px 0;
+    
+}
+
+
+.container-inline-date .form-item,
+.container-inline-date .form-item input {
+        width: 100%;
+    }
+
+
+    /*/ --- Teasers --- /*/
