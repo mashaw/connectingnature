@@ -54,6 +54,34 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'cn_icons3';
+  src: url('fonts/cn_icons3.eot?14130983');
+  src: url('fonts/cn_icons3.eot?14130983#iefix') format('embedded-opentype'),
+       url('fonts/cn_icons3.woff2?14130983') format('woff2'),
+       url('fonts/cn_icons3.woff?14130983') format('woff'),
+       url('fonts/cn_icons3.ttf?14130983') format('truetype'),
+       url('fonts/cn_icons3.svg?14130983#cn_icons3') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'file_type_icons';
+  src: url('fonts/file_type_icons.eot?93226055');
+  src: url('fonts/file_type_icons.eot?93226055#iefix') format('embedded-opentype'),
+       url('fonts/file_type_icons.woff2?93226055') format('woff2'),
+       url('fonts/file_type_icons.woff?93226055') format('woff'),
+       url('fonts/file_type_icons.ttf?93226055') format('truetype'),
+       url('fonts/file_type_icons.svg?93226055#file_type_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -113,23 +141,56 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-plus-circled:before { content: '\e800'; } /* '' */
-.icon-minus-circled:before { content: '\e801'; } /* '' */
-.icon-search:before { content: '\e802'; } /* '' */
-.icon-facebook-circled-1:before { content: '\f051'; } /* '' */
-.icon-twitter-circled-1:before { content: '\f057'; } /* '' */
-.icon-angle-left:before { content: '\f104'; } /* '' */
-.icon-angle-right:before { content: '\f105'; } /* '' */
-.icon-angle-up:before { content: '\f106'; } /* '' */
-.icon-angle-down:before { content: '\f107'; } /* '' */
-.icon-angle-circled-left:before { content: '\f137'; } /* '' */
-.icon-angle-circled-right:before { content: '\f138'; } /* '' */
-.icon-angle-circled-up:before { content: '\f139'; } /* '' */
-.icon-angle-circled-down:before { content: '\f13a'; } /* '' */
-.icon-youtube-play:before { content: '\f16a'; } /* '' */
-.icon-instagram:before { content: '\f16d'; } /* '' */
-
-
+//.icon-plus-circled:before { content: '\e800'; } /* '' */
+//.icon-minus-circled:before { content: '\e801'; } /* '' */
+//.icon-search:before { content: '\e802'; } /* '' */
+//.icon-facebook-circled-1:before { content: '\f051'; } /* '' */
+//.icon-twitter-circled-1:before { content: '\f057'; } /* '' */
+//.icon-angle-left:before { content: '\f104'; } /* '' */
+//.icon-angle-right:before { content: '\f105'; } /* '' */
+//.icon-angle-up:before { content: '\f106'; } /* '' */
+//.icon-angle-down:before { content: '\f107'; } /* '' */
+//.icon-angle-circled-left:before { content: '\f137'; } /* '' */
+//.icon-angle-circled-right:before { content: '\f138'; } /* '' */
+//.icon-angle-circled-up:before { content: '\f139'; } /* '' */
+//.icon-angle-circled-down:before { content: '\f13a'; } /* '' */
+//.icon-youtube-play:before { content: '\f16a'; } /* '' */
+//.icon-instagram:before { content: '\f16d'; } /* '' */
+//
+//.icon-doc:before { content: '\e800'; } /* '' */
+//.icon-download:before { content: '\e801'; } /* '' */
+//.icon-upload:before { content: '\e802'; } /* '' */
+//.icon-camera:before { content: '\e803'; } /* '' */
+//.icon-arrows-cw:before { content: '\e804'; } /* '' */
+//.icon-arrows-cw-1:before { content: '\e805'; } /* '' */
+//.icon-globe:before { content: '\e806'; } /* '' */
+//.icon-link-ext:before { content: '\f08e'; } /* '' */
+//.icon-laptop:before { content: '\f109'; } /* '' */
+//.icon-tablet:before { content: '\f10a'; } /* '' */
+//.icon-mobile-1:before { content: '\f10b'; } /* '' */
+//.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+//.icon-file-word:before { content: '\f1c2'; } /* '' */
+//.icon-file-excel:before { content: '\f1c3'; } /* '' */
+//.icon-file-powerpoint:before { content: '\f1c4'; } /* '' */
+//.icon-file-image:before { content: '\f1c5'; } /* '' */
+//.icon-file-archive:before { content: '\f1c6'; } /* '' */
+//.icon-file-audio:before { content: '\f1c7'; } /* '' */
+//.icon-file-video:before { content: '\f1c8'; } /* '' */
+//.icon-file-code:before { content: '\f1c9'; } /* '' */
+//
+//
+//.icon-arrows-cw:before { content: '\e804'; } /* '' */
+//.icon-link-ext:before { content: '\f08e'; } /* '' */
+//.icon-doc-text:before { content: '\f0f6'; } /* '' */
+//.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+//.icon-file-word:before { content: '\f1c2'; } /* '' */
+//.icon-file-excel:before { content: '\f1c3'; } /* '' */
+//.icon-file-powerpoint:before { content: '\f1c4'; } /* '' */
+//.icon-file-image:before { content: '\f1c5'; } /* '' */
+//.icon-file-archive:before { content: '\f1c6'; } /* '' */
+//.icon-file-audio:before { content: '\f1c7'; } /* '' */
+//.icon-file-video:before { content: '\f1c8'; } /* '' */
+//.icon-file-code:before { content: '\f1c9'; } /* '' */
 
 
 body {
@@ -323,4 +384,76 @@ blockquote {
     h3 {
         color: #4f4e4d !important;
     }
+    
+    
+    .node-type-article.blog  &  {background: rgba( $blue, 0.85);}
+    .node-type-article.news  &  {background: rgba( $green, 0.85);}
+    .node-type-article.spotlight  &  {background: rgba( $yellow, 0.85);}
 }
+
+
+/*/  ===  Link types === /*/
+:not(.block-image)> {
+    a[target="_blank"],
+    a[href$=".xls"],
+    a[href$=".xlsx"],
+    a[href$=".ppt"],
+    a[href$=".doc"],
+    a[href$=".docx"],
+    a[href$=".pdf"],
+    a[href$=".gz"],
+    a[href$=".tar"],
+    a[href$=".zip"],
+    a[href$=".zipx"],
+    a[href$=".txt"] {
+        &:after {
+            @include icon-font('\f1c1');
+            font-family: 'file_type_icons';
+            font-size: 1.2em;
+            text-decoration: none;
+            margin: 0 0 0 0.15em;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    a[target="_blank"] {
+        &:after {
+            content: '\f08e';
+        }
+    }
+    a[href$=".doc"],
+    a[href$=".docx"] {
+        &:after {
+            content: '\f1c2';
+        }
+    }
+    a[href$=".xls"],
+    a[href$=".xlsx"] {
+        &:after {
+            content: '\f1c3';
+        }
+    }
+    a[href$=".ppt"] {
+        &:after {
+            content: '\f1c4';
+        }
+    }
+    a[href$=".gz"],
+    a[href$=".tar"],
+    a[href$=".zip"],
+    a[href$=".zipx"] {
+        &:after {
+            content: '\f1c6';
+        }
+    }
+    a[href$=".txt"] {
+        &:after {
+            content: '\f0f6';
+        }
+    }
+}
+
+
+
+

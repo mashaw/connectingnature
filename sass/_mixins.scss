@@ -38,13 +38,18 @@
 // Brand colours
 
 $green:#87ad26;
-$purple:#9375af;
+$purple1:#9375af;
 $blue:#9bd6e5;
 $yellow:#fced3a;
 $black:#4f4e4d;
 $darkgrey:#666666;
 $midgrey:#95989a;
 $grey:#666666;
+$purple:linear-gradient($purple1 50%, $yellow 50%);
+
+
+
+
 
 @mixin kill-list() {
 	 .menu  , ul , li {
@@ -100,7 +105,7 @@ border-top-right-radius: $radius;
 	padding: 0.33em 0.66em;
 	@include border-radius(0);
 	text-decoration: none!important;
-	@include buttonhover($vblue);
+	@include buttonhover($blue);
 }
 
 
@@ -153,13 +158,33 @@ border-top-right-radius: $radius;
             color: #fff
         }
     }
-    &:hover {
+     &:hover {
         cursor: pointer;
         .text-content {
             top: 0;
         }
     }
+    .fixed &:hover {cursor:default}
     .fixed & .text-content {
         top: 0 !important;
     }
 }
+
+
+    @media (max-width:767px) {
+        .col-xs-1:nth-child(12n+1) {
+            clear: left;
+        }
+        .col-xs-2:nth-child(6n+1) {
+            clear: left;
+        }
+        .col-xs-3:nth-child(4n+1) {
+            clear: left;
+        }
+        .col-xs-4:nth-child(3n+1) {
+            clear: left;
+        }
+        .col-xs-6:nth-child(odd) {
+            clear: left;
+        }
+    }

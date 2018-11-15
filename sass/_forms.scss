@@ -16,23 +16,23 @@ input.form-autocomplete  {
 	background: #fff
 }
 		
-btn btn-default form-submit
 
-.pager li>a,
-.pager li>span,
-.more-link,
-.btn,
-.btn-default,
-.btn-sm,
-.btn-primary,
+
+.pager li>a ,
+.pager li>span ,
+.more-link ,
+.btn ,
+.btn-default ,
+.btn-sm ,
+.btn-primary ,
 button  {
     @include dosis-semi;
     text-transform: uppercase;
     font-size: 18px;
     padding: 0.25em 0.5em;
-    color: $grey;
+    color: $green;
     background: transparent;
-    border: 1px solid $grey;
+    border: 2px solid  $green;
     border-radius: 0;
     text-decoration: none!important;
     margin: 1em 0;
@@ -70,7 +70,32 @@ button  {
              border-color: $black;
         }
     }
+    
+.yellow   & ,
+    .institution_68 & ,
+    .institution_72 & ,
+    .institution_74 & , 
+    .institution_77 & ,
+    .institution_57 & {
+        border-color: $black!important;
+        color: $black!important;
+        &:hover {
+            color: $black;
+            background-color: #fff;
+            //border-color: #4f4e4d;;
+        }
+         &:active {background-color: $black;
+             border-color: $black;
+             color: #fff!important;
+        }
+    }
+    
+    
+    
 }
+
+
+
 
 
 
@@ -122,7 +147,16 @@ button  {
         }
     }
 }
-          
+
+
+
+
+
+
+
+
+
+
 
 
 #search-block-form .input-group input.form-control::-webkit-input-placeholder {

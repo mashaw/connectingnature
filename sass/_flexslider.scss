@@ -252,18 +252,9 @@ ul.slides li {position:relative}
 	p {
 		color: #fff;
 		margin: 0;
-		a {font-size:85%;
+		a {display:inline-block;
 			color: #fff;
 			text-decoration: none;
-			&:hover {
-				text-decoration:underline;
-			}
-			&:after {
-				font-size: 1em;
-				text-decoration: none;
-				padding-left:0.33em;
-			}
-
 		}
 	}
 	h2 {
