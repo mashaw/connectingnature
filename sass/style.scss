@@ -275,16 +275,18 @@ aside[role="complementary"]  {padding-top: 15px;}
     }
 }
 
-//&.col-sm-12 {
-//    @media (min-width: 768px) {
-//        padding-right: 70px;
-//        padding-left: 70px;
-//    }
-//    @media (min-width: 960px) {
-//        padding-right: 140px;
-//        padding-left: 140px;
-//    }
-//}
+.one-sidebar.sidebar-first .main-container.content_blocks {
+    padding-left:15px;
+        padding-right:15px;
+    @media (min-width: 768px) {
+        margin-left: 33.3333%;
+        width: 66.66666667%;
+    }
+    @media (min-width: 960px) {
+        margin-left: 25%;
+        width: 75%;
+    }
+}
 
 header.sidebars {
     padding-right: 15px;
@@ -1576,3 +1578,77 @@ figcaption.field {
         margin-right: 0.5em;
     }
 }
+
+
+/*/  ===  Sticky box on Acadamy pages === /*/
+
+@media (max-width: 768px) {
+    .extra-padding .region-content {
+        padding-top: 90px
+    }
+}
+
+.sticky-box {
+    blockquote {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    @media (min-width: 768px) {
+            blockquote {
+                margin-top: 15px
+            }
+        }
+    
+    &.stickynav-active {
+        position: fixed;
+        z-index: 1000;
+        top:0;
+        right: 15px;
+        left:15px;
+        @media (min-width: 768px) {
+            right: auto;
+            left: auto;
+            max-width: 1300px;
+        }
+        .wrapper {background:#fff;
+            h3 {margin-top:0}
+            @media (min-width: 768px) {
+                width: 33%;
+                padding-right: 30px;
+            }
+            @media (min-width: 992px) {
+                width: 25%;
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
+/*/  ===  Step pages prev/next links === /*/
+
+.block.step_next,
+.block.step_prev {
+    width: 49%;
+    .btn {
+        font-size: 14px;
+        padding: 0.15em 0.3em;
+    }
+}
+
+.block.step_next {
+    float: right;
+    .btn {
+        float: left;
+    }
+}
+
+.block.step_prev {
+    float: left;
+    .btn {
+        float: right
+    }
+}
+
+.block-easy-social  {width:100%;clear:both}
+
+

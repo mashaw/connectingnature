@@ -35,6 +35,8 @@ stylesheets[all][] = css/style.css
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
+scripts[] = js/stickynav.js
+
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/affix.js'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/alert.js'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/button.js'

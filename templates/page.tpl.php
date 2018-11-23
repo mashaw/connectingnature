@@ -165,15 +165,15 @@
 
       <?php print render($page['content']); ?>
 
-    </section>
 
-
+   </section>
 
     <?php if (!empty($page['content_blocks'])): ?>
 
 
         <div class="main-container content_blocks col-sm-12"><?php print render($page['content_blocks']); ?></div>
       <?php endif; ?>
+
 
 
 

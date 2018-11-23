@@ -301,37 +301,65 @@ p,
 }
 
 
-/* line 185, ../sass/_fonts.scss */
+.node-type-page {
+     h1,
+     h2:not(.block-title),
+     h3 {
+         color: $purple1;
+     }
+     &.green {
+         h1,
+         h2:not(.block-title),
+         h3 {
+             color: $green;
+         }
+     }
+     &.yellow {
+         h1,
+         h2:not(.block-title),
+         h3 {
+             color: $yellow;
+         }
+     }
+     &.blue {
+         h1,
+         h2:not(.block-title),
+         h3 {
+             color: $blue;
+         }
+     }
+ }
+
+            
+            
 .page-events h1,
 .page-events h2:not(.block-title),
 .page-events h3,
 .node-type-event h1,
 .node-type-event h2:not(.block-title),
 .node-type-event h3 {
-  color: #9375af;
+  color: $purple1;
 }
 
-/* line 194, ../sass/_fonts.scss */
-.node-type-page h1,
-.node-type-page h2:not(.block-title),
-.node-type-page h3,
+
+
 .page-contact h1,
 .page-contact h2:not(.block-title),
 .page-contact h3 {
-  color: #9375af;
+  color: $purple1;
 }
 
-/* line 202, ../sass/_fonts.scss */
+
 .page-blog-articles h1,
 .page-blog-articles h2:not(.block-title),
 .page-blog-articles h3,
 .node-type-article.blog h1,
 .node-type-article.blog h2:not(.block-title),
 .node-type-article.blog h3 {
-  color: #9bd6e5;
+  color: $purple1;
 }
 
-/* line 211, ../sass/_fonts.scss */
+
 .page-news-articles h1,
 .page-news-articles h2:not(.block-title),
 .page-news-articles h3,
@@ -341,7 +369,7 @@ p,
 .node-type-city h1,
 .node-type-city h2:not(.block-title),
 .node-type-city h3 {
-  color: #87ad26;
+  color: $green;
 }
 
 
@@ -370,7 +398,8 @@ blockquote {
     color: #4f4e4d !important;
     margin: 15px 0;
     padding: 0.66em 0.66em 0.66em 1em;
-    background: rgba(147, 117, 175, 0.66);
+    //background: rgba(147, 117, 175, 0.66);
+    background-color: mix($purple1, #fff, 66%);
     border: none;
     p,
     li {
@@ -384,12 +413,57 @@ blockquote {
     h3 {
         color: #4f4e4d !important;
     }
-    
-    
-    .node-type-article.blog  &  {background: rgba( $blue, 0.85);}
-    .node-type-article.news  &  {background: rgba( $green, 0.85);}
-    .node-type-article.spotlight  &  {background: rgba( $yellow, 0.85);}
+    a,
+    a:link,
+    a:visited {
+        color: $purple1;
+    }
+//    .node-type-article.blog & {
+//        background-color: mix( $blue, #fff, 85%);
+//    }
+//    .node-type-article.news & {
+//        background-color: mix( $green, #fff, 85%);
+//    }
+//    .node-type-article.spotlight & {
+//        background-color: mix( $yellow, #fff, 85%);
+//    }
+     .node-type-article.news & ,
+    .node-type-page.green & {
+        background-color: mix( $green, #fff, 85%);
+                a,
+        a:link,
+        a:visited {
+            color: darken($green, 20%);
+        }
+    }
+     .node-type-article.spotlight &  ,
+    .node-type-page.yellow & {
+        background-color: mix( $yellow, #fff, 85%);
+        a,
+        a:link,
+        a:visited {
+            color: darken($yellow, 25%);
+        }
+    }
+    .node-type-article.blog & ,
+    .node-type-page.blue & {
+        background-color: mix( $blue, #fff, 85%);
+        a,
+        a:link,
+        a:visited {
+            color: darken($blue, 20%);
+        }
+    }
+    .node-type-page.purple & {
+        background-color: mix( $purple1, #fff, 85%);
+        a,
+        a:link,
+        a:visited {
+             color: darken($purple1, 20%);
+        }
+    }
 }
+
 
 
 /*/  ===  Link types === /*/

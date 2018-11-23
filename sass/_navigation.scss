@@ -217,8 +217,6 @@ $menu-hover-colour: hsl(0, 0%, 96%);
 }
 
 
-
-
 @media all and (min-width: 768px) {
     .region-navigation .block-menu-block {
         .menu {
@@ -241,8 +239,8 @@ $menu-hover-colour: hsl(0, 0%, 96%);
                         color: $black;
                     }
                 }
-                &.expanded:not(.leaf)>a:after {}
-                &.expanded:not(.leaf):hover>a:after {}
+                //&.expanded:not(.leaf)>a:after {}
+                //&.expanded:not(.leaf):hover>a:after {}
                 a {
                     padding-top: 3px!important;
                     border-bottom: 6px solid #fff;
@@ -267,8 +265,8 @@ $menu-hover-colour: hsl(0, 0%, 96%);
                         float: none;
                         background: #fff;
                         background: $menu-hover-colour;
-                        &.expanded:not(.leaf):hover>a:after,
-                        &.is-active-trail:not(.leaf)>a:after {}
+                       // &.expanded:not(.leaf):hover>a:after,
+                        //&.is-active-trail:not(.leaf)>a:after {}
                         //&.last a {padding-bottom:10px;}
                         a {
                             text-align: left;
@@ -393,10 +391,6 @@ $menu-hover-colour: hsl(0, 0%, 96%);
 .pager .previous>span {
     float: left;
 }
-
-
-
-
 .pager li>a,
 .pager li>span {
     @include dosis-semi;
