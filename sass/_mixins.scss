@@ -157,19 +157,26 @@ border-top-right-radius: $radius;
         p {
             color: #fff
         }
+        .fixed & .btn-sm {
+            position: absolute;
+            margin:0;
+            bottom: 15px;
+            right: 15px;
+        }
     }
-     &:hover {
+    &:hover {
         cursor: pointer;
         .text-content {
             top: 0;
         }
     }
-    .fixed &:hover {cursor:default}
+    .fixed &:hover {
+        cursor: default
+    }
     .fixed & .text-content {
         top: 0 !important;
     }
 }
-
 
     @media (max-width:767px) {
         .col-xs-1:nth-child(12n+1) {

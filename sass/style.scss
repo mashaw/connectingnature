@@ -231,7 +231,7 @@ ul.nav li.dropdown ul.dropdown-menu {
         padding: 0 15px 10px 15px;
         margin-right: auto;
         margin-left: auto;
-            max-width: 1300px;
+        max-width: 1300px;
     }
 }
 
@@ -1053,8 +1053,9 @@ label[for=overlay_toggle2] {
     .entity-paragraphs-item.paragraphs-item-feature-box-3-col {
         margin: 0 0 30px 0;
     }
-    .wrapper {
+    .wrapper { 
         @include feature-box-wrapper;
+   
     }
     & .purple .wrapper {
         border-color: $purple;
@@ -1102,6 +1103,12 @@ label[for=overlay_toggle2] {
         }
         .text-content {
             top: 0;
+            .btn-sm {
+            position: absolute;
+            margin:0;
+            bottom: 15px;
+            right: 15px;
+        }
         }
     }
     @media all and (min-width: 992px) {
@@ -1586,6 +1593,13 @@ figcaption.field {
     .extra-padding .region-content {
         padding-top: 90px
     }
+    
+  
+}
+@media (min-width: 768px) {
+  .extra-padding  .content_blocks {z-index: 600;}
+  .extra-padding #content-section   {z-index: 600;}
+    
 }
 
 .sticky-box {
@@ -1593,62 +1607,88 @@ figcaption.field {
         margin-top: 0;
         font-size: 16px;
     }
-    @media (min-width: 768px) {
-            blockquote {
-                margin-top: 15px
-            }
-        }
-    
     &.stickynav-active {
-        position: fixed;
-        z-index: 1000;
-        top:0;
-        right: 15px;
-        left:15px;
-        @media (min-width: 768px) {
+            position:relative;
+            z-index:auto;
+            top: auto;
             right: auto;
-            left: auto;
-            max-width: 1300px;
+        left: auto;}
+    @media (min-width: 768px) {
+        blockquote {
+            margin-top: 15px
         }
-        .wrapper {background:#fff;
-            h3 {margin-top:0}
+        &.stickynav-active {
+            position: fixed;
+            z-index: 500;
+            top: 0;
+            right: 15px;
+            left: 15px;
             @media (min-width: 768px) {
-                width: 33%;
-                padding-right: 30px;
+                right: auto;
+                left: auto;
+                max-width: 1300px;
             }
-            @media (min-width: 992px) {
-                width: 25%;
-                padding-right: 30px;
+            .wrapper {
+                background: #fff;
+                h3 {
+                    margin-top: 0
+                }
+                @media (min-width: 768px) {
+                    width: 33%;
+                    padding-right: 30px;
+                }
+                @media (min-width: 992px) {
+                    width: 25%;
+                    padding-right: 30px;
+                }
             }
         }
     }
 }
 
-/*/  ===  Step pages prev/next links === /*/
-
-.block.step_next,
-.block.step_prev {
-    width: 49%;
-    .btn {
+/*/  ===  Pages prev/next links === /*/
+.step_next,
+.step_prev {
+    @media (min-width: 600px) {
+        width: 49%;
+    }
+    a {
         font-size: 14px;
-        padding: 0.15em 0.3em;
+        padding: 0.2em 0.5em;
     }
-}
-
-.block.step_next {
-    float: right;
-    .btn {
+    &.step_next {
+        float: right;
+        a {
+            padding-right: 0em;
+            float: right;
+            @media (min-width: 600px) {
+                float: left;
+            }
+            &:after {
+                @include icon-font('\f105');
+                font-size: 16px;
+            }
+        }
+    }
+    &.step_prev {
         float: left;
+        a {
+            padding-left: 0;
+            float: left;
+            @media (min-width: 600px) {
+                float: right;
+            }
+            &:before {
+                @include icon-font('\f104');
+                font-size: 16px;
+            }
+        }
     }
 }
 
-.block.step_prev {
-    float: left;
-    .btn {
-        float: right
-    }
+
+
+.block-easy-social {
+    width: 100%;
+    clear: both
 }
-
-.block-easy-social  {width:100%;clear:both}
-
-

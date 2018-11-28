@@ -1,0 +1,58 @@
+ 
+* = = = = = = = = =
+* Disk Driver: virtio_blk
+* = = = = = = = = =
+ 
+ 
+* = = = = = = = = =
+* NIC Driver: virtio_net
+* = = = = = = = = =
+ 
+Preparing to build initrd for Debian
+Working with /boot/vmlinuz-3.16.0-4-amd64
+Which is version: 3.16.0-4-amd64
+3. Swap already present on this host
+3.5 creating the actual swapfile.
+Setting up swapspace version 1, size = 1048572 KiB
+no label, UUID=7ff2142a-44be-431e-a7c9-f69112094a95
+Updating system
+Ign http://mirror.bytemark.co.uk jessie InRelease
+Get:1 http://mirror.bytemark.co.uk jessie-backports InRelease [166 kB]
+Hit http://repo.bytemark.co.uk ./ InRelease
+Hit http://symbiosis.bytemark.co.uk ./ InRelease
+Hit http://repo.bytemark.co.uk ./ InRelease
+Hit http://mirror.bytemark.co.uk jessie Release.gpg
+Hit http://mirror.bytemark.co.uk jessie Release
+Hit http://repo.bytemark.co.uk ./ Sources
+Hit http://repo.bytemark.co.uk ./ Packages
+Ign http://repo.bytemark.co.uk ./ Translation-en
+Get:2 http://mirror.bytemark.co.uk jessie-backports/main amd64 Packages/DiffIndex [27.8 kB]
+Get:3 http://security.debian.org jessie/updates InRelease [63.1 kB]
+Get:4 http://mirror.bytemark.co.uk jessie-backports/contrib amd64 Packages/DiffIndex [25.0 kB]
+Get:5 http://mirror.bytemark.co.uk jessie-backports/non-free amd64 Packages/DiffIndex [22.9 kB]
+Get:6 http://mirror.bytemark.co.uk jessie-backports/contrib Translation-en/DiffIndex [7468 B]
+Hit http://symbiosis.bytemark.co.uk ./ Packages
+Get:7 http://mirror.bytemark.co.uk jessie-backports/main Translation-en/DiffIndex [27.8 kB]
+Get:8 http://mirror.bytemark.co.uk jessie-backports/non-free Translation-en/DiffIndex [17.2 kB]
+Hit http://repo.bytemark.co.uk ./ Sources
+Hit http://repo.bytemark.co.uk ./ Packages
+Ign http://symbiosis.bytemark.co.uk ./ Translation-en
+Ign http://repo.bytemark.co.uk ./ Translation-en
+Hit http://mirror.bytemark.co.uk jessie/main amd64 Packages
+Hit http://mirror.bytemark.co.uk jessie/contrib amd64 Packages
+Hit http://mirror.bytemark.co.uk jessie/non-free amd64 Packages
+Hit http://mirror.bytemark.co.uk jessie/contrib Translation-en
+Hit http://mirror.bytemark.co.uk jessie/main Translation-en
+Hit http://mirror.bytemark.co.uk jessie/non-free Translation-en
+Get:9 http://security.debian.org jessie/updates/main amd64 Packages [486 kB]
+Hit http://security.debian.org jessie/updates/contrib amd64 Packages
+Hit http://security.debian.org jessie/updates/non-free amd64 Packages
+Hit http://security.debian.org jessie/updates/contrib Translation-en
+Hit http://security.debian.org jessie/updates/main Translation-en
+Hit http://security.debian.org jessie/updates/non-free Translation-en
+Fetched 843 kB in 1s (450 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
