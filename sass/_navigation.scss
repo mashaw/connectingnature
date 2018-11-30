@@ -66,10 +66,10 @@
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 769px) {
     .navbar-collapse {
         float: none;
-        clear: both;
+        clear: both!important;
         .region-navigation .block-menu-block {
             //BACKGROUND:#ededed;
             float: none;
@@ -79,12 +79,11 @@
     }
 }
 
-@media all and (min-width: 768px) {
-    .navbar-toggle {
-        display: none;
-    }
+@media all and (min-width: 769px) {
+    .navbar-toggle ,
     .nav-label {
-        display: none
+        display: none;
+        //background:#bada55;
     }
 }
 
@@ -133,6 +132,7 @@ $menu-hover-colour: hsl(0, 0%, 96%);
             &.expanded:not(.leaf)>a:after {
                 margin: 0
             }
+           
             a {
                 @include dosis-reg;
                 color: $midgrey;
@@ -166,12 +166,20 @@ $menu-hover-colour: hsl(0, 0%, 96%);
         }
         .menu {
             // Level 2 //
+             li.expanded:not(.leaf)>a:after {
+                    @include icon-font('\f105');
+                    font-size: 20px;
+                }
+            @media all and (max-width: 768px)   {
+            li.expanded.active-trail:not(.leaf)>a:after {
+                content: '\f107';
+            }
+        }
             a {
                 font-size: 17px;
                 text-transform: none;
                 text-overflow: inherit;
-                padding: 2px 0px  0px 0px;
-
+                padding: 2px 0px 0px 0px;
                 border-bottom: 3px solid $menu-hover-colour;
                 padding-bottom: 0;
                 &:hover {
@@ -188,6 +196,7 @@ $menu-hover-colour: hsl(0, 0%, 96%);
             }
             .menu li {
                 padding: 1px 6px;
+                
             }
             &.is-active {
                 >a:not(.active) {
@@ -202,7 +211,6 @@ $menu-hover-colour: hsl(0, 0%, 96%);
         }
     }
 }
-
 @media all and (max-width: 960px) {
     .region-navigation .block-menu-block .menu li {
         padding-left: 10px;
@@ -210,15 +218,26 @@ $menu-hover-colour: hsl(0, 0%, 96%);
     }
 }
 
-@media all and (min-width: 766px) {
-    .region-navigation .block-menu-block {
-        clear: right;
+.navbar-collapse.collapse {
+    display: none !important;
+    &.in {
+        display: block !important;
+    }
+}
+ 
+
+@media (min-width: 769px) {
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
     }
 }
 
-
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
     .region-navigation .block-menu-block {
+        clear: right;
         .menu {
             padding: 0;
             margin: 0;
@@ -239,7 +258,7 @@ $menu-hover-colour: hsl(0, 0%, 96%);
                         color: $black;
                     }
                 }
-                //&.expanded:not(.leaf)>a:after {}
+                
                 //&.expanded:not(.leaf):hover>a:after {}
                 a {
                     padding-top: 3px!important;
@@ -267,7 +286,10 @@ $menu-hover-colour: hsl(0, 0%, 96%);
                         background: $menu-hover-colour;
                        // &.expanded:not(.leaf):hover>a:after,
                         //&.is-active-trail:not(.leaf)>a:after {}
-                        //&.last a {padding-bottom:10px;}
+                        &.expanded:not(.leaf)>a:after  {
+                @include icon-font('\f105');
+                font-size: 16px;
+            }
                         a {
                             text-align: left;
                             padding-right: 0px;
@@ -306,10 +328,25 @@ $menu-hover-colour: hsl(0, 0%, 96%);
             }
         }
     }
-    .menu-mlid-1107>.menu {
-        left: auto!important;
-        right: 100%!important;
-    }
+    .menu-mlid-1124 .menu {
+        .expanded:not(.leaf)>a {
+            text-indent: -6px;
+            &:after {
+                content: ""!important;
+            }
+            &:before {
+                @include icon-font('\f104');
+                font-size: 16px;
+                width: 6px;
+            }
+        }
+             .menu {
+                left: auto!important;
+                right: 100%!important;
+            }
+        }
+
+    
     .menu-block-3>.menu>li.leaf.active {
         .menu &:hover,
         a.active:hover,
@@ -319,18 +356,12 @@ $menu-hover-colour: hsl(0, 0%, 96%);
     }
 }
     @media all and (max-width: 768px) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        clear: both!important;
-    }
-    
     .region-navigation .block-menu-block * {
         background: transparent!important;
         //text-align: center!important;
     }
     .region-navigation {            
         .block-menu-block {
-
             background: $menu-hover-colour;
             .menu li {
                 margin-top: 8px!important;

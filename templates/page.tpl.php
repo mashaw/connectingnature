@@ -131,7 +131,7 @@
 
    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
 
- <?php if (!empty($title)): ?>
+         <?php if (empty($page['sidebar_first']) && !empty($title)):?>
 
  <?php print render($title_prefix); ?>
 
@@ -162,6 +162,16 @@
     <section  <?php print $content_column_class; ?>  id="content-section" role="main">
 
       <a id="main-content"></a>
+
+        <?php if (!empty($page['sidebar_first']) && !empty($title)):?>
+
+ <?php print render($title_prefix); ?>
+
+<h1 class="page-header"><?php print $title; ?></h1>
+
+      <?php print render($title_suffix); ?>
+
+  <?php endif; ?>
 
       <?php print render($page['content']); ?>
 

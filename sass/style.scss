@@ -136,16 +136,16 @@ hr {
             width: 100%;
         }
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 800px) {
         
          .navbar-btn.logo {
-             width: 155px;}
+             width: 150px;}
         
     }
         @media all and (max-width: 500px) {
         
          .navbar-btn.logo {
-             width: 130px;}
+             width: 120px;}
         
     }
     .region-header {
@@ -1589,9 +1589,9 @@ figcaption.field {
 
 /*/  ===  Sticky box on Acadamy pages === /*/
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .extra-padding .region-content {
-        padding-top: 90px
+       // padding-bottom: 90px
     }
     
   
@@ -1634,7 +1634,7 @@ figcaption.field {
                     margin-top: 0
                 }
                 @media (min-width: 768px) {
-                    width: 33%;
+                    width: 33%;background:purple;
                     padding-right: 30px;
                 }
                 @media (min-width: 992px) {
