@@ -16,7 +16,7 @@ input.form-autocomplete  {
 	background: #fff
 }
 		
-
+.menu-block-4 a , 
 .step_next a,
 .step_prev a ,
 .pager li>a ,
@@ -55,6 +55,7 @@ button  {
     .image-widget & {
         border-color: black;
     }
+    .menu-block-4 & ,
     &.btn-sm ,
     div.btn-sm & {
         font-size: 14px;

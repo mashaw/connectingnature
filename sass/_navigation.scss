@@ -132,7 +132,6 @@ $menu-hover-colour: hsl(0, 0%, 96%);
             &.expanded:not(.leaf)>a:after {
                 margin: 0
             }
-           
             a {
                 @include dosis-reg;
                 color: $midgrey;

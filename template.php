@@ -40,3 +40,34 @@ $css = array_diff_key($css, $exclude);
 }
 
 
+function connectingnature_file_icon($variables) {
+  $file = $variables['file'];
+  $alt = $variables['alt'];
+  $icon_directory = $variables['icon_directory'];
+
+  $mime = check_plain($file->filemime);
+  $icon_url = file_icon_url($file, $icon_directory);
+  return '<img class="file-icon xxxxx" alt="' . check_plain($alt) . '" title="' . $mime . '" src="' . $icon_url . '" />';
+}
+
+
+
+function connectingnature_file_link($variables) {
+ $file = $variables['file'];
+  $icon_directory = $variables['icon_directory'];
+  $url = file_create_url($file->uri);
+  $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
+  $options = array(
+    'attributes' => array(
+       'type' => $file->filemime . '; length=' . $file->filesize,
+     ),
+  );
+  if (empty($file->description)) {
+    $link_text = $file->filename;
+  } else {
+    $link_text = $file->description;
+    $options['attributes']['title'] = check_plain($file->filename);
+  }
+  return '<span class="file"'  . l($link_text, $url, $options) . '</span>';
+}
+
