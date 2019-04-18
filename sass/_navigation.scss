@@ -19,14 +19,14 @@
     }
 }
 
-.navbar-default .navbar-toggle {
+.navbar-default .navbar-toggle {background: transparent;
     border: none;
     border-radius: 0;
     margin-right: 10px;
     padding: 0px 10px 6px 4px;
     .icon-bar {
-        height: 5px;
-        margin: 5px 0;
+        height: 4px;
+        margin: 6px 0;
         width: 36px;
         background: $midgrey;
         border-radius: 5px;
@@ -116,7 +116,7 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 }
 
 
-$menu-hover-colour: hsl(0, 0%, 96%);
+
 
 .region-navigation .block-menu-block {
     float: right;
@@ -452,3 +452,4 @@ $menu-hover-colour: hsl(0, 0%, 96%);
         border-color: black;
     }
 }
+

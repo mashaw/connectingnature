@@ -17,14 +17,20 @@
           //we need to compensate the element so that the content does not jump up.
           Drupal.behaviors.stickynav.compensation = $menu.outerHeight();
           $(window).scroll(function () {
-            if ($(window).scrollTop() > Drupal.behaviors.stickynav.breakpoint) {
-              $menu.addClass('stickynav-active');
-              $('body').addClass('extra-padding');
-            }
-            else {
-              $menu.removeClass('stickynav-active');
-              $('body').removeClass('extra-padding');
-            }
+            //if ($(window).scrollTop() > Drupal.behaviors.stickynav.breakpoint) {
+              //$menu.addClass('stickynav-active');
+              //$('body').addClass('extra-padding');
+           // }
+            //else {
+             // $menu.removeClass('stickynav-active');
+             // $('body').removeClass('extra-padding');
+           // }
+            //if ($(window).scrollTop() != 0) {
+              //$('body').addClass('shink');
+            //}
+            //else {
+             // $('body').removeClass('shink');
+           // }
           });
         });
       }
